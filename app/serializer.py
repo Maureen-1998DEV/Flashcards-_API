@@ -40,4 +40,4 @@ class NoteSerializer(serializers.ModelSerializer):
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = ("user", "bio", "profile_pic", "contact", "location", "notes", "created_at", "updated_at")
+        fields = ("user", "bio", "profile_pic", "notes", "created_at", "updated_at")

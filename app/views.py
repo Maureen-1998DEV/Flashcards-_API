@@ -68,7 +68,7 @@ class logoutUser(APIView):
         return Response(status=status.HTTP_200_OK)
 
 
-class SubjectList(APIView):  
+class CourseList(APIView):  
     permission_classes = (IsAdminOrReadOnly,)
 
     def get(self, request, format=None):  
@@ -84,7 +84,7 @@ class SubjectList(APIView):
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class SubjectDetail(APIView):  
+class CourseDetail(APIView):  
     permission_classes = (IsAdminOrReadOnly,)
 
     def get_object(self, pk):
@@ -112,7 +112,7 @@ class SubjectDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class NotesList(APIView):  
+class NoteList(APIView):  
     permission_classes = (IsAdminOrReadOnly,)
 
     def get(self, request, format=None):  
@@ -128,7 +128,7 @@ class NotesList(APIView):
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class NotesDetail(APIView):  
+class NoteDetail(APIView):  
     permission_classes = (IsAdminOrReadOnly,)
 
     def get_object(self, pk):
